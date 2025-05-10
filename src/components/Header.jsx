@@ -71,7 +71,7 @@ const NavContainer = styled.nav `
             &:hover {
                 color: #C92071;
                 font-weight: 600;
-                letter-spacing: 0.188px;
+                letter-spacing: 0.2px;
                 border-bottom: 3px solid #C92071;
             }
         }
