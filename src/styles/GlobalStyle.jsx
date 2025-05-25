@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
 
         // trasitons
         --fade-in-out: 0.2s ease-in-out;
-        
+        --slip: 0.1s ease-in-out;
     }
 
 // general
@@ -66,12 +66,20 @@ const GlobalStyle = createGlobalStyle`
         .justi-cont-sp-between { justify-content: space-between; }
         .align-i-center { align-items: center !important; }
 
+        .d-block { display: flex; }
+
     // widths and heights
         .w-full { width: 100%; }
         .w-half { width: 50%; }
+        .w-third { width: calc(100% / 3) }
         .logo-size {
             width: 253px;
             height: 44px;
+        }
+
+    // gaps
+        .gap1em {
+            gap: 1em;
         }
 
     // text and fonts
@@ -91,6 +99,7 @@ const GlobalStyle = createGlobalStyle`
         .font-13 { font-size: 13px; }
         .font-16 { font-size: 16px; }
         .font-18 { font-size: 18px; }
+        .font-23 { font-size: 23px; }
         .font-64 { font-size: 64px; }
 
     // text colors
@@ -101,6 +110,7 @@ const GlobalStyle = createGlobalStyle`
 
     // background colors
         .bg-primary { background-color: var(--primary); } // ##C92071
+        .bg-light-gray-2 { background-color: var(--light-gray-2); }
         .bg-light-gray-3 { background-color: var(--light-gray-3); } // #f5f5f5
         .bg-error { background-color: var(--error); } // #EE4266
 
@@ -120,11 +130,17 @@ const GlobalStyle = createGlobalStyle`
             padding: 12px 40px;
         }
 
+    // borders
+        .round-full { border-radius: 100%; }
+        .round10 { border-radius: 10px; }
+        .round5 { border-radius: 5px; }
+
     // others
         .pointer { cursor: pointer; }
 
     // trasitions
         .transiton02s { transition: var(--fade-in-out); }
+        .transiton01s { transition: var(--slip); }
 
     // main structures
         .header {

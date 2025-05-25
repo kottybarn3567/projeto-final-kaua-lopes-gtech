@@ -1,8 +1,36 @@
 import styled from "styled-components";
 import product0 from "../assets/images/product0.png";
-import Carousel from "../components/Carousel"
+import { useState } from "react";
 
-const MainContainer = styled.main `
+const slidesText = [
+    {
+        title: "Queima de estoque Nike🔥",
+        subtitle: "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.",
+        tag: "Melhores Ofertas Personalizadas",
+        button: "Ver Ofertas"
+    },
+    {
+        title: "Sapatos Sociais com até 50% OFF 👞",
+        subtitle: "Modelos clássicos e modernos com acabamento premium. Ideal para eventos, trabalho e ocasiões especiais.",
+        tag: "Estilo Sofisticado",
+        button: "Ver Coleção"
+    },
+    {
+        title: "Tênis Casuais a partir de R$99 👟",
+        subtitle: "Estilo urbano e conforto total para qualquer rotina. Várias cores e modelos incríveis pra você!",
+        tag: "Conforto no Dia a Dia",
+        button: "Explorar Tênis"
+    },
+    {
+        title: "Sapatos Femininos com até 60% OFF 👠",
+        subtitle: "Estilo, conforto e personalidade em cada passo. Dos saltos aos tênis, tudo em promoção!",
+        tag: "Especial Para Elas",
+        button: "Ver Ofertas"
+    },
+];
+
+
+const MainContainer = styled.main`
     width: 100%;
     box-sizing: border-box;
 
@@ -15,6 +43,18 @@ const MainContainer = styled.main `
         }
     }
 
+    & .collections {
+        padding: 50px 100px;
+
+        & h3 {
+            margin-bottom: 25px;
+        }
+
+        & .collec-items {
+            height: 40px;
+        }
+    }
+
     // classes
 
     div.slide-home {
@@ -24,9 +64,11 @@ const MainContainer = styled.main `
     div.new {
         width: 39%;
         gap: 34px;
+        transition: opacity 0.4s ease-in-out;
+        opacity: 1;
 
-        & a {
-
+        &.fade-out {
+            opacity: 0;
         }
 
         & h1 {
@@ -44,12 +86,29 @@ const MainContainer = styled.main `
 
     div.scroll-balls {
         margin-top: 120px;
+        width: 78px;
+        margin: 100px auto;
+        position: relative;
+        z-index: 1;
+
+        & .balls {
+            width: 12px;
+            height: 12px;
+        }
+
+        & .balls:hover {
+            width: 12px;
+            height: 12px;
+            background-color: #c92071;
+        }
     }
 
     div.product {
         overflow: hidden;
 
         & img {
+            z-index: 0;
+            position: relative;
             width: 733px;
             height: 733px;
             rotate: -19.34deg;
@@ -58,65 +117,65 @@ const MainContainer = styled.main `
 
 `;
 
+
 const HomePage = () => {
-
-    let slides = [
-
-    {
-        title: "Queima de <br/> stoque Nike🔥",
-        desc: "Consequat culpa exercitation mollit nisi excepteur do <br/> do tempor laboris eiusmod irure consectetur.",
-        content: "Melhores Ofertas Personalizadas",
-        img: product0 
-    },
-
-    {
-        title: "Outlet <br/> Puma⚡",
-        desc: "Modelos selecionados <br/> por preços especiais",
-        content: "Até 70% OFF",
-        img: product0
-    },
-    {
-        title: "Promo <br/> Especial Under",
-        desc: "Tênis de corrida <br/> Frete grátis para todo Brasil",
-        content: "Edição Limitada",
-        img: product0
-    },
-    {
-        title: "Black Friday <br/> Early Access",
-        desc: "Acesso antecipado <br/> para clientes VIP",
-        content: "Começa amanhã",
-        img: product0
-    }
-];
+    const [activeSlide, setActiveSlide] = useState(0);
+    const [fade, setFade] = useState(true);
 
     return (
         <MainContainer>
             <section>
-                <article className="bg-light-gray-3 w-full ">
+                <article className="bg-light-gray-3 w-full">
                     <div className="slide-home d-flex justi-cont-center align-i-center">
-                        <div className="new d-flex flex-col">
-                            <a className="text-warning bold-700 font-16" href="">Melhores Ofertas Personalizadas</a>
-                            <h1 className="font-64">Queima de <br/> stoque Nike🔥</h1>
+                        <div className={`new d-flex flex-col ${fade ? "" : "fade-out"}`}>
+                            <a className="text-warning bold-700 font-16" href="">
+                                {slidesText[activeSlide].tag}
+                            </a>
+                            <h1 className="font-64">{slidesText[activeSlide].title}</h1>
                             <h2 className="font-18 text-dark-gray-2 bold-normal">
-                                Consequat culpa exercitation mollit nisi excepteur do <br/> do tempor laboris eiusmod irure consectetur.
+                                {slidesText[activeSlide].subtitle}
                             </h2>
-                            <button className="button-general bg-primary-btn transiton02s">Ver Ofertas</button>
+                            <button className="button-general bg-primary-btn transiton02s">
+                                {slidesText[activeSlide].button}
+                            </button>
                         </div>
+
                         <div className="product">
                             <img src={product0} alt="" />
                         </div>
                     </div>
-                    <div className="scroll-balls" style={{ backgroundColor: 'blue' }}>
-                        a
+
+                    <div className="scroll-balls d-flex justi-cont-sp-between">
+                        {[0, 1, 2, 3].map((index) => (
+                            <span
+                                key={index}
+                                onClick={() => {
+                                    if (activeSlide !== index) {
+                                        setFade(false);
+                                        setTimeout(() => {
+                                        setActiveSlide(index);
+                                        setFade(true);
+                                        }, 200); // tempo do fade-out
+                                    }
+                                }}
+                                className={`balls round-full d-block transiton01s pointer ${activeSlide === index ? "bg-primary-btn" : "bg-light-gray-2"
+                                    }`}
+                            ></span>
+                        ))}
                     </div>
                 </article>
             </section>
-            
-            <section>
-                oi
+
+            <section className="collections">
+                <h3 className="font-23 text-dark-gray-2">Coleções em destaque</h3>
+                <div className="d-flex justi-cont-sp-between gap1em">
+                    <div className="bg-primary w-third collec-items gap1em round10"></div>
+                    <div className="bg-primary w-third collec-items gap1em round10"></div>
+                    <div className="bg-primary w-third collec-items gap1em round10"></div>
+                </div>
             </section>
         </MainContainer>
     );
-}
- 
+};
+
 export default HomePage;
