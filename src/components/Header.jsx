@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const InputContent = styled.input`
 
     background-color: rgba(0, 0, 0, 0);
+    width: 90%;
 
     &::placeholder {
         opacity: 60%;
