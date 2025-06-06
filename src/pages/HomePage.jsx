@@ -93,6 +93,10 @@ const SectionTwo = styled.section`
 
  `;
 
+const GridContainer = styled.div `
+  grid-template-columns: repeat(4, 1fr);
+`;
+
 {/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */ }
 
 const HomePage = () => {
@@ -196,14 +200,12 @@ const HomePage = () => {
               <p className="font-14 bold-700 text-dark-gray-2">Tênis</p>
             </div>
         </div>
-
-        <h3 className="text-dark-gray-2 d-flex align-i-center justi-cont-sp-between w-full">Produtos em alta
-          <span className="d-flex align-i-center justi-cont-center">
-            Ver todos
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ff0000f9" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208ZM80,128a8,8,0,0,1,8-8h60.69l-18.35-18.34a8,8,0,0,1,11.32-11.32l32,32a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L148.69,136H88A8,8,0,0,1,80,128Z"></path></svg>
-          </span>
-        </h3>
       </SectionTwo>
+      <Section title="Produtos em alta" titleAlign="left">
+        <p>Ver todos </p>
+        <GridContainer>
+        </GridContainer>
+      </Section>
     </MainContainer>
   );
 };

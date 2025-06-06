@@ -61,9 +61,13 @@ const GlobalStyle = createGlobalStyle`
     .relative { position: relative; }
     .absolute { position: absolute; }
 
+  /* Overflow */
+    .over-f-hid { overflow: hidden; }
+
   /* Display and layout */
     .d-flex { display: flex; }
     .d-block { display: block; }
+    .d-grid { display: grid; }
     .flex-col { flex-direction: column; }
     .justi-cont-center { justify-content: center; }
     .justi-cont-sp-between { justify-content: space-between; }
@@ -146,8 +150,10 @@ const GlobalStyle = createGlobalStyle`
     .round10 { border-radius: 10px; }
     .round5 { border-radius: 5px; }
 
-  /* Paddings */
-    
+  /* Grids */
+    .obj-tall2 { grid-row: span 2; }
+
+    .obj-wide2 { grid-column: span 2; }
 
   /* Others */
     .pointer { cursor: pointer; }
