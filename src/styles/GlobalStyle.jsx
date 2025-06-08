@@ -35,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
         --light-gray-2: #CCCCCC;
         --light-gray-3: #F5F5F5;
         --white: #FFFFFF;
+        --black: black;
         --light-green: #E7FF86;
         --radius-button: 10px;
         --lalala: rgba(0, 0, 0, 0.742);
@@ -75,6 +76,8 @@ const GlobalStyle = createGlobalStyle`
     .justi-cont-sp-evenly { justify-content: space-evenly; }
     .align-i-center { align-items: center !important; }
 
+    .box-size { box-sizing: border-box; }
+
   /* Widths and heights */
     .w-full { width: 100%; }
     .w-half { width: 50%; }
@@ -96,26 +99,33 @@ const GlobalStyle = createGlobalStyle`
         text-underline-offset: 2px;
     }
 
+
+    .bold-300 { font-weight: 300; }
     .bold-normal { font-weight: normal; }
     .bold-500 { font-weight: 500; }
     .bold-600 { font-weight: 600; }
     .bold-700 { font-weight: 700; }
 
     .text-center { text-align: center; }
+    .cort { text-decoration: line-through; }
 
+    .font-12 { font-size: 12px; }
     .font-13 { font-size: 13px; }
     .font-14 { font-size: 14px; }
     .font-16 { font-size: 16px; }
     .font-18 { font-size: 18px; }
     .font-23 { font-size: 23px; }
+    .font-24 { font-size: 24px; }
     .font-64 { font-size: 64px; }
     .font-256 { font-size: 256px; }
 
   /* Text colors */
     .text-white { color: var(--white); }
+    .text-black { color: var(--black); }
     .text-primary { color: var(--primary); }
     .text-warning { color: var(--warning); }
     .text-error { color: var(--error); }
+    .text-light-gray { color: var(--light-gray); }
     .text-dark-gray-2 { color: var(--dark-gray-2); }
     .text-success { color: var(--success); }
 
@@ -175,6 +185,10 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 454px;
         background-color: var(--dark-gray);
+    }
+  /* Tests */
+    .marker {
+      border: 1.7px dashed grey;
     }
 
 `;
