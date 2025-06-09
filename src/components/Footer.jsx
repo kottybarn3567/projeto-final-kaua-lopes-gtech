@@ -3,6 +3,7 @@ import LogoFooter from "./LogoFooter";
 import SvgFacebook from "../assets/facebook.svg";
 import SvgInstagram from "../assets/instagram.svg";
 import SvgTwitter from "../assets/twitter.svg";
+import { Link } from "react-router-dom";
 
 const FooterContainer = styled.footer `
 
@@ -90,7 +91,7 @@ const Footer = () => {
                         <li className="font-16"><a href="">Calças</a></li>
                         <li className="font-16"> <a href="">Bonés</a> </li>
                         <li className="font-16"> <a href="">Headphones</a> </li>
-                        <li className="font-16"> <a href="">Tênis</a> </li>
+                        <li className="font-16"> <Link to={"/product-listing-page"}>Tênis</Link> </li>
                     </ul>
                 </div>
                 <div className="footer-info-field text-16">

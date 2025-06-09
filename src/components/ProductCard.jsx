@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Tenis from "../assets/images/product-for-listing.png";
 
-const CardContainer = styled.div `
+const CardContainer = styled.div`
     color: green;
     height: auto;
 
@@ -10,7 +10,7 @@ const CardContainer = styled.div `
         left: 13px;
         background-color: #E7FF86;
         width: fit-content;
-        padding: 7px 10px;
+        padding: 5px 10px;
         border-radius: 999px;
     }
 
@@ -57,11 +57,16 @@ const ProductCard = ({ type, name, old_price, new_price, offer_num }) => {
                     <p className="font-24 bold-700 black">{new_price}</p>
                 </div>
             </div>
-            <div className="offer absolute">
-                <p className="text-dark-gray-2">{offer_num}</p>
-            </div>
+
+            {
+                offer_num && (
+                    <div className="offer absolute">
+                        <p className="text-dark-gray-2 text-14 bold-700">{offer_num}</p>
+                    </div>
+                )
+            }
         </CardContainer>
     );
 }
- 
+
 export default ProductCard;

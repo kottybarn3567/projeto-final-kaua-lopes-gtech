@@ -30,7 +30,7 @@ const NotFoun404 = () => {
             <div className="d-flex align-i-center justi-cont-center flex-col">
                 <h1 className="font-256 text-error bold-700">404</h1>
                 <p className="text-dark-gray-2">It seems that this page doesn't exist...</p>
-                    <NavLink className="button-general bg-primary text-white" to={"/product-listing"}>Go Back</NavLink>
+                    <NavLink className="button-general bg-primary text-white" to={"/"}>Go Back</NavLink>
             </div>
         </NotFContainer>
     );

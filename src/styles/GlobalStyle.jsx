@@ -87,6 +87,8 @@ const GlobalStyle = createGlobalStyle`
         height: 44px;
     }
 
+    .w-fit { width: fit-content; }
+
   /* Gaps */
     .gap1em { gap: 1em; }
 
@@ -99,6 +101,7 @@ const GlobalStyle = createGlobalStyle`
         text-underline-offset: 2px;
     }
 
+    .line-h-28 { line-height:28px; }
 
     .bold-300 { font-weight: 300; }
     .bold-normal { font-weight: normal; }
@@ -116,6 +119,7 @@ const GlobalStyle = createGlobalStyle`
     .font-18 { font-size: 18px; }
     .font-23 { font-size: 23px; }
     .font-24 { font-size: 24px; }
+    .font-48 { font-size: 48px; }
     .font-64 { font-size: 64px; }
     .font-256 { font-size: 256px; }
 
@@ -131,6 +135,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Background colors */
     .bg-primary { background-color: var(--primary); }
+    .bg-white { background-color: var(--white); }
     .bg-light-gray-2 { background-color: var(--light-gray-2); }
     .bg-light-gray-3 { background-color: var(--light-gray-3); }
     .bg-error { background-color: var(--error); }
@@ -152,6 +157,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 600;
         border-radius: var(--radius-button);
         padding: 12px 40px;
+        transition: var(--slip);
     }
 
   /* Borders */
