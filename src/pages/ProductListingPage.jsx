@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "../components/ProductCard"; // seu card estilizado com styled-components
+import { Link } from "react-router-dom";
 
 const ProductListingPage = () => {
   const products = [
@@ -14,7 +15,7 @@ const ProductListingPage = () => {
   ];
 
   return (
-    <div className="w-full d-flex flex-col" style={{ padding: "2rem 6rem", backgroundColor: "#F9F8FE"}}>
+    <div className="w-full d-flex flex-col" style={{ padding: "2rem 6rem", backgroundColor: "#F9F8FE" }}>
       {/* Título */}
       <p className="font-16 bold-600">Resultados para “Tênis” – 389 produtos</p>
 
@@ -46,112 +47,141 @@ const ProductListingPage = () => {
               gap: "1.5rem",
             }}
           >
-            {/* Só um card completo */}
+            <Link to={"/product-viewPage"}>
               <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
               <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
               <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
               <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
               <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
           </div>
         </main>
       </div>

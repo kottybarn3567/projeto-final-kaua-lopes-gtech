@@ -81,6 +81,8 @@ const GlobalStyle = createGlobalStyle`
   /* Widths and heights */
     .w-full { width: 100%; }
     .w-half { width: 50%; }
+    .h-full { height: 100%; }
+    .h-half { height: 50%; }
     .w-third { width: calc(100% / 3); }
     .logo-size {
         width: 253px;
@@ -130,6 +132,7 @@ const GlobalStyle = createGlobalStyle`
     .text-warning { color: var(--warning); }
     .text-error { color: var(--error); }
     .text-light-gray { color: var(--light-gray); }
+    .text-light-gray-2 { color: var(--light-gray-2); }
     .text-dark-gray-2 { color: var(--dark-gray-2); }
     .text-success { color: var(--success); }
 
@@ -141,6 +144,7 @@ const GlobalStyle = createGlobalStyle`
     .bg-error { background-color: var(--error); }
     .bg-success { background-color: var(--success); }
     .bg-light-green { background-color: var(--light-green); }
+    .bg-warning { background-color: var(--warning); }
 
     .bg-primary-btn {
         background-color: var(--primary);

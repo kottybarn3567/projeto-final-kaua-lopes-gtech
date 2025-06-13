@@ -271,56 +271,72 @@ const HomePage = () => {
               <path d="M12.5 1.5L17 6M17 6L12.5 10.5M17 6H1" stroke="#C92071" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </Link>
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200 "}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
               />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-              offer_num={"30% OFF"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-            />
-            <ProductCard
-              type={"Tênis"}
-              name={"K-Swiss V8 - Masculino"}
-              old_price={"$200"}
-              new_price={"$100"}
-            />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+                offer_num={"30% OFF"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+              />
+            </Link>
+            <Link to={"/product-viewPage"}>
+              <ProductCard
+                type={"Tênis"}
+                name={"K-Swiss V8 - Masculino"}
+                old_price={"$200"}
+                new_price={"$100"}
+              />
+            </Link>
         </GridContainer>
       </Section>
       <SectionSpecial className="d-flex bg-white justi-cont-center">
